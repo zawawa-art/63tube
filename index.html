@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>63tube - choco</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="cast-header">
+      <h1>🎀 choco</h1>
+      <div class="countdown" id="countdown">卒業まであと -- 日</div>
+    </header>
+
+    <div class="viewport" id="viewport">
+      <!-- 動画スライドは JS で動的生成 -->
+      <button id="navPrev" class="nav-btn nav-prev">‹</button>
+      <button id="navNext" class="nav-btn nav-next">›</button>
+      <div class="wheel-hint">マウスホイールで次の動画へ</div>
+    </div>
+
+    <footer class="controls">
+      <div class="top-controls">
+        <button id="muteBtn" class="mute-btn">🔊</button>
+        <button id="likeBtn" class="like-btn">
+          <span class="heart">❤️</span>
+          <span class="like-count" id="likeCount">0</span>
+        </button>
+      </div>
+
+      <div class="comment-area">
+        <input type="text" id="commentInput" placeholder="コメントを書く…（ニックネームは自動です）">
+        <button id="commentBtn">送信</button>
+      </div>
+
+      <div class="comments-list" id="commentsList">
+        <!-- コメントは JS で挿入 -->
+      </div>
+    </footer>
+
+    <div class="pagination">
+      <span id="currentIdx">1</span> / <span id="totalCount">0</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

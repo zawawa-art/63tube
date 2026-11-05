@@ -1,0 +1,24 @@
+[
+  {
+    "id": "choco-001",
+    "cast": "choco",
+    "title": "動画1",
+    "date": "2025-09-11",
+    "url": "./video/2025-09-11_21-10-39_IMG_7835.MOV",
+    "duration": 35,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "portrait"
+  },
+  {
+    "id": "choco-002",
+    "cast": "choco",
+    "title": "動画2",
+    "date": "2025-09-11",
+    "url": "./video/2025-09-11_23-34-42_IMG_7956.MOV",
+    "duration": 30,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "portrait"
+  }
+]
