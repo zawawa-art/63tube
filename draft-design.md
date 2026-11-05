@@ -113,9 +113,8 @@ mac mini の `/Volumes/SUNEAST2TB/63archive/data/63tube/` に動画ファイル�
 
 ### 2. ファイルリストを確認
 ```bash
-ssh mini "ls -la /Volumes/SUNEAST2TB/63archive/data/63tube/"
+ssh mini.goldeye-lime.ts.net "ls -la /Volumes/SUNEAST2TB/63archive/data/63tube/"
 ```
-（ssh 接続できない場合は、ユーザーにファイルリストを依頼）
 
 ### 3. videos.json に追加
 ```json
