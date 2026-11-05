@@ -106,6 +106,47 @@ GET /comments.json → コメント一覧
 - 動画ファイルサイズは 25MiB 未満に抑える（Pages 制限ではなく、CF キャッシュの観点でも推奨）
 - 必要なら `.MOV` を `.MP4`（H.264/AAC）に変換して互換性を高める
 
+## 新しい動画を追加する手順
+
+### 1. 動画ファイルを配置
+mac mini の `/Volumes/SUNEAST2TB/63archive/data/63tube/` に動画ファイルをコピー
+
+### 2. ファイルリストを確認
+```bash
+ssh mini "ls -la /Volumes/SUNEAST2TB/63archive/data/63tube/"
+```
+（ssh 接続できない場合は、ユーザーにファイルリストを依頼）
+
+### 3. videos.json に追加
+```json
+{
+  "id": "choco-XXX",
+  "cast": "choco",
+  "title": "タイトル",
+  "date": "YYYY-MM-DD",
+  "url": "https://media.zawawa.uk/63tube/<ファイル名>",
+  "duration": 秒数,
+  "width": 幅,
+  "height": 高さ,
+  "orientation": "portrait" // または "landscape"
+}
+```
+
+### 4. 動画メタデータを取得（ffprobe が使える場合）
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration -of csv=p=0 /Volumes/SUNEAST2TB/63archive/data/63tube/<ファイル名>
+```
+
+### 5. commit & push
+```bash
+cd /Users/sinya/vibecoding/63tube
+git add videos.json
+git commit -m "Add video: <タイトル>"
+git push origin main
+```
+
+Cloudflare Pages が自動再デプロイされ、新しい動画がサイトに反映されます。
+
 ## 今後のTODO
 - [ ] Cloudflare Pages にデプロイ（Git リポジトリ作成・push・Pages 接続）
 - [ ] カスタムドメイン `https://63tube.zawawa.uk` に紐付け
