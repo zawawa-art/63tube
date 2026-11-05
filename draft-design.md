@@ -85,9 +85,35 @@ GET /comments.json → コメント一覧
 - video タグに直接タッチイベントを付けるとフルスクリーンになるので、wrapper でタップを処理
 - video タグは毎回新規作成ではなく、preloadedVideos で使い回し（状態汚染防止）
 
+## Cloudflare Tunnel 設定（動画配信用）
+
+### mac mini 側の準備
+1. 動画ファイルを特定ディレクトリに配置（例：`~/63tube-video/`）
+2. そのディレクトリで HTTP サーバーを起動（例：`python3 -m http.server 8000`）
+3. Cloudflare Tunnel でそのポートをインターネットに公開
+   ```bash
+   cloudflared tunnel --url http://localhost:8000
+   ```
+   または `cloudflared tunnel --url http://localhost:8000 --hostname video.63tube.zawawa.uk`
+
+### videos.json の url 書き換え
+Tunnel の URL（例：`https://video.63tube.zawawa.uk`）を確認して、`videos.json` の `url` を以下のように書き換える：
+
+```json
+{
+  "url": "https://video.63tube.zawawa.uk/2025-09-11_21-10-39_IMG_7835.MOV"
+}
+```
+
+### CF キャッシュの活用
+- Tunnel 経由で配信しても、CF エッジキャッシュが効くので、同じ動画へのアクセスは mac mini に届かない
+- 動画ファイルサイズは 25MiB 未満に抑える（Pages 制限ではなく、CF キャッシュの観点でも推奨）
+- 必要なら `.MOV` を `.MP4`（H.264/AAC）に変換して互換性を高める
+
 ## 今後のTODO
 - [ ] Cloudflare Pages にデプロイ（Git リポジトリ作成・push・Pages 接続）
 - [ ] カスタムドメイン `https://63tube.zawawa.uk` に紐付け
+- [ ] Cloudflare Tunnel で mac mini の動画ディレクトリを公開、videos.json の url を Tunnel URL に書き換え
 - [ ] 動画を R2 に移行（CF キャッシュを存分に活用、家宛トラフィックゼロ）
 - [ ] JSON → D1 移行（いいね・コメントの同時書き込み対応）
 - [ ] キャスト追加（choco 以外）、テーマ色変更
