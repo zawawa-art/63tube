@@ -87,21 +87,17 @@ GET /comments.json → コメント一覧
 
 ## Cloudflare Tunnel 設定（動画配信用）
 
-### mac mini 側の準備
-1. 動画ファイルを特定ディレクトリに配置（例：`~/63tube-video/`）
-2. そのディレクトリで HTTP サーバーを起動（例：`python3 -m http.server 8000`）
-3. Cloudflare Tunnel でそのポートをインターネットに公開
-   ```bash
-   cloudflared tunnel --url http://localhost:8000
-   ```
-   または `cloudflared tunnel --url http://localhost:8000 --hostname video.63tube.zawawa.uk`
+### 配信先（現行踏襲）
+- 動画置き場: `/Volumes/SUNEAST2TB/63archive/data/63tube/`（mac mini）
+- 公開 URL: `https://media.zawawa.uk/63tube/<ファイル名>`
+- ssh mini でアクセス可能
 
 ### videos.json の url 書き換え
-Tunnel の URL（例：`https://video.63tube.zawawa.uk`）を確認して、`videos.json` の `url` を以下のように書き換える：
+`videos.json` の `url` を以下のように設定：
 
 ```json
 {
-  "url": "https://video.63tube.zawawa.uk/2025-09-11_21-10-39_IMG_7835.MOV"
+  "url": "https://media.zawawa.uk/63tube/2025-09-11_21-10-39_IMG_7835.MOV"
 }
 ```
 
