@@ -12,7 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-SRC = Path("/Volumes/SUNEAST2TB/pub.zawawa.uk/63tube/choco/_publish2")
+SRC = Path("/Volumes/SUNEAST2TB/pub.zawawa.uk/63tube/choco")
 OUT = Path(__file__).resolve().parent / "videos.json"
 
 # ファイル名に日付が無いもの（既知の対応）
@@ -83,7 +83,7 @@ def main():
             "cast": "choco",
             "title": e["title"],
             "date": e["date"],
-            "url": f"https://pub.zawawa.uk/63tube/choco/{e['file']}",
+            "url": f"https://pub.zawawa.uk/63tube/choco/{e['file']}?v=2",
             "duration": e["dur"],
             "width": e["w"],
             "height": e["h"],
