@@ -87,56 +87,57 @@ GET /comments.json → コメント一覧
 
 ## Cloudflare Tunnel 設定（動画配信用）
 
-### 配信先（現行踏襲）
-- 動画置き場: `/Volumes/SUNEAST2TB/63archive/data/63tube/`（mac mini）
-- 公開 URL: `https://media.zawawa.uk/63tube/<ファイル名>`
-- ssh mini でアクセス可能
+### 配信先（案A：認証なし公開）
+- 公開ホスト: `pub.zawawa.uk`（認証なし、誰でもアクセス可）
+- 既存ホスト: `media.zawawa.uk`（Basic 認証あり、63tube には使わない）
+- 動画置き場: `/Volumes/SUNEAST2TB/63archive/data/63tube-pub/`（mac mini、ディレクトリ分離）
+- Tunnel ツール: `cloudflared`
+
+### mac mini 側の準備
+```bash
+# 1. 公開ディレクトリで HTTP サーバー起動
+cd /Volumes/SUNEAST2TB/63archive/data/63tube-pub/
+python3 -m http.server 8001
+
+# 2. Cloudflare Tunnel で公開（認証なし）
+cloudflared tunnel --url http://localhost:8001 --hostname pub.zawawa.uk
+```
 
 ### videos.json の url 書き換え
-`videos.json` の `url` を以下のように設定：
-
 ```json
 {
-  "url": "https://media.zawawa.uk/63tube/2025-09-11_21-10-39_IMG_7835.MOV"
+  "url": "https://pub.zawawa.uk/63tube/2025-09-11_21-10-39_IMG_7835.MOV"
 }
 ```
 
 ### CF キャッシュの活用
 - Tunnel 経由で配信しても、CF エッジキャッシュが効くので、同じ動画へのアクセスは mac mini に届かない
-- 動画ファイルサイズは 25MiB 未満に抑える（Pages 制限ではなく、CF キャッシュの観点でも推奨）
+- 動画ファイルサイズは 25MiB 未満に抑える（CF キャッシュの観点でも推奨）
 - 必要なら `.MOV` を `.MP4`（H.264/AAC）に変換して互換性を高める
 
 ## 新しい動画を追加する手順
 
 ### 1. 動画ファイルを配置
-mac mini の `/Volumes/SUNEAST2TB/63archive/data/63tube/` に動画ファイルをコピー
-
-### 2. ファイルリストを確認
 ```bash
-ssh mini.goldeye-lime.ts.net "ls -la /Volumes/SUNEAST2TB/63archive/data/63tube/"
+ssh mini.goldeye-lime.ts.net "ls -la /Volumes/SUNEAST2TB/63archive/data/63tube-pub/"
 ```
 
-### 3. videos.json に追加
+### 2. videos.json に追加
 ```json
 {
   "id": "choco-XXX",
   "cast": "choco",
   "title": "タイトル",
   "date": "YYYY-MM-DD",
-  "url": "https://media.zawawa.uk/63tube/<ファイル名>",
+  "url": "https://pub.zawawa.uk/63tube/<ファイル名>",
   "duration": 秒数,
   "width": 幅,
   "height": 高さ,
-  "orientation": "portrait" // または "landscape"
+  "orientation": "portrait"
 }
 ```
 
-### 4. 動画メタデータを取得（ffprobe が使える場合）
-```bash
-ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration -of csv=p=0 /Volumes/SUNEAST2TB/63archive/data/63tube/<ファイル名>
-```
-
-### 5. commit & push
+### 3. commit & push
 ```bash
 cd /Users/sinya/vibecoding/63tube
 git add videos.json
