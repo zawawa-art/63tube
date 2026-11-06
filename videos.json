@@ -2,10 +2,10 @@
   {
     "id": "choco-001",
     "cast": "choco",
-    "title": "動画1",
-    "date": "2025-09-11",
-    "url": "https://pub.zawawa.uk/63tube/2025-09-11_21-10-39_IMG_7835.MOV",
-    "duration": 35,
+    "title": "デビュー8日後のChocoBaaam（2019-10-10）",
+    "date": "2019-10-10",
+    "url": "https://pub.zawawa.uk/63tube/choco/2019-10-10_23-43-00_ChocoBaaam.mp4",
+    "duration": 19,
     "width": 1080,
     "height": 1920,
     "orientation": "portrait"
@@ -13,10 +13,10 @@
   {
     "id": "choco-002",
     "cast": "choco",
-    "title": "動画2",
+    "title": "IMG_7835（2025-09-11）",
     "date": "2025-09-11",
-    "url": "https://pub.zawawa.uk/63tube/2025-09-11_23-34-42_IMG_7956.MOV",
-    "duration": 30,
+    "url": "https://pub.zawawa.uk/63tube/choco/2025-09-11_21-10-39_IMG_7835.mp4",
+    "duration": 15,
     "width": 1080,
     "height": 1920,
     "orientation": "portrait"
@@ -24,23 +24,34 @@
   {
     "id": "choco-003",
     "cast": "choco",
-    "title": "動画3",
-    "date": "2025-11-06",
-    "url": "https://pub.zawawa.uk/63tube/IMG_1193_ChocoPole.MOV",
-    "duration": 0,
-    "width": 0,
-    "height": 0,
+    "title": "IMG_7956（2025-09-11）",
+    "date": "2025-09-11",
+    "url": "https://pub.zawawa.uk/63tube/choco/2025-09-11_23-34-42_IMG_7956.mp4",
+    "duration": 51,
+    "width": 1080,
+    "height": 1920,
     "orientation": "portrait"
   },
   {
     "id": "choco-004",
     "cast": "choco",
-    "title": "動画4",
-    "date": "2025-11-06",
-    "url": "https://pub.zawawa.uk/63tube/IMG_3270_Choco.MOV",
-    "duration": 0,
-    "width": 0,
-    "height": 0,
+    "title": "IMG_1193 ChocoPole（2022-02-25）",
+    "date": "2022-02-25",
+    "url": "https://pub.zawawa.uk/63tube/choco/IMG_1193_ChocoPole.mp4",
+    "duration": 40,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "portrait"
+  },
+  {
+    "id": "choco-005",
+    "cast": "choco",
+    "title": "IMG_3270 Choco（2022-03-15）",
+    "date": "2022-03-15",
+    "url": "https://pub.zawawa.uk/63tube/choco/IMG_3270_Choco.mp4",
+    "duration": 7,
+    "width": 1080,
+    "height": 1920,
     "orientation": "portrait"
   }
 ]
