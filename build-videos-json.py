@@ -65,8 +65,9 @@ def title_of(stem: str) -> str:
 
 def main():
     files = sorted(SRC.glob("*.mp4"))
+    files = [f for f in files if not f.name.endswith(".sd.mp4")]  # フォールバックは除外
     if not files:
-        sys.exit("_publish/ にmp4がありません")
+        sys.exit("mp4がありません")
     entries = []
     for f in files:
         stem = f.stem
@@ -78,17 +79,21 @@ def main():
     entries.sort(key=lambda e: (e["date"], e["file"]))
     out = []
     for i, e in enumerate(entries, 1):
-        out.append({
+        entry = {
             "id": f"choco-{i:03d}",
             "cast": "choco",
             "title": e["title"],
             "date": e["date"],
-            "url": f"https://pub.zawawa.uk/63tube/choco/{e['file']}?v=2",
+            "url": f"https://pub.zawawa.uk/63tube/choco/{e['file']}?v=3",
             "duration": e["dur"],
             "width": e["w"],
             "height": e["h"],
             "orientation": "portrait",
-        })
+        }
+        sd = SRC / e["file"].replace(".mp4", ".sd.mp4")
+        if sd.exists():
+            entry["url_sd"] = f"https://pub.zawawa.uk/63tube/choco/{sd.name}?v=3"
+        out.append(entry)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2))
     total = sum(e["dur"] for e in entries)
     print(f"{len(out)}本 / 計{total}秒 / 保存: {OUT}")

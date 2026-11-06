@@ -66,6 +66,14 @@ async function loadData() {
   }
 }
 
+// HEVC(HDR)対応判定 — 非対応端末はSDRフォールバックへ
+function pickUrl(v) {
+  if (!v.url_sd) return v.url;
+  const ok = document.createElement('video')
+    .canPlayType('video/mp4; codecs="hvc1.1.6.L150.B0"');
+  return ok === 'probably' ? v.url : v.url_sd;
+}
+
 // スライド描画（ループ対応・プリロード再利用）
 function render(index) {
   // ループ処理：最初から前へ→最後へ、最後から次へ→最初へ
@@ -93,7 +101,7 @@ function render(index) {
   let vid = preloadedVideos[index];
   if (!vid) {
     vid = document.createElement('video');
-    vid.src = video.url;
+    vid.src = pickUrl(video);
     vid.playsInline = true;
     vid.setAttribute('webkit-playsinline', '');
     vid.setAttribute('playsinline', '');
@@ -187,7 +195,7 @@ function preload(index) {
   if (preloadedVideos[index]) return;
   const v = videos[index];
   const vid = document.createElement('video');
-  vid.src = v.url;
+  vid.src = pickUrl(v);
   vid.playsInline = true;
   vid.setAttribute('webkit-playsinline', '');
   vid.setAttribute('playsinline', '');
