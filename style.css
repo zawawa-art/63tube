@@ -33,7 +33,7 @@ html, body {
 }
 
 .cast-header h1 {
-  font-size: 24px;
+  font-size: clamp(14px, 4.2vw, 24px);
   font-weight: 800;
   letter-spacing: 2px;
   color: #ff69b4;

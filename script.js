@@ -29,13 +29,21 @@ const countdownEl = document.getElementById('countdown');
 // 動画プリロード用（前後1本を先読み）
 const preloadedVideos = {};
 
-// カウントダウン（卒業日：2026-11-14 例）
+// カウントダウン（卒業日時：2026-11-10 1:00）
 function updateCountdown() {
-  const gradDate = new Date('2026-11-14T00:00:00+09:00');
+  const gradDate = new Date('2026-11-10T01:00:00+09:00');
   const now = new Date();
   const diff = gradDate - now;
-  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-  countdownEl.textContent = days > 0 ? `卒業まであと ${days} 日` : '卒業おめでとう！🎉';
+  if (diff <= 0) {
+    countdownEl.textContent = '卒業おめでとう！🎉';
+    return;
+  }
+  const totalHours = Math.floor(diff / (1000 * 60 * 60));
+  const days = Math.floor(totalHours / 24);
+  const hours = totalHours % 24;
+  countdownEl.textContent = days > 0
+    ? `卒業まであと ${days} 日${hours > 0 ? ` ${hours} 時間` : ''}`
+    : `卒業まであと ${hours} 時間`;
 }
 
 setInterval(updateCountdown, 60000);
