@@ -29,24 +29,24 @@ const countdownEl = document.getElementById('countdown');
 // 動画プリロード用（前後1本を先読み）
 const preloadedVideos = {};
 
-// カウントダウン（卒業日時：2026-11-10 1:00）
+// カウントダウン（卒業日時：2026-11-10 1:00・1秒毎に更新）
 function updateCountdown() {
   const gradDate = new Date('2026-11-10T01:00:00+09:00');
-  const now = new Date();
-  const diff = gradDate - now;
+  const diff = gradDate - new Date();
   if (diff <= 0) {
     countdownEl.textContent = '卒業おめでとう！🎉';
     return;
   }
-  const totalHours = Math.floor(diff / (1000 * 60 * 60));
-  const days = Math.floor(totalHours / 24);
-  const hours = totalHours % 24;
-  countdownEl.textContent = days > 0
-    ? `卒業まであと ${days} 日${hours > 0 ? ` ${hours} 時間` : ''}`
-    : `卒業まであと ${hours} 時間`;
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor(diff / 3600000) % 24;
+  const m = Math.floor(diff / 60000) % 60;
+  const s = Math.floor(diff / 1000) % 60;
+  const p = (n) => String(n).padStart(2, '0');
+  countdownEl.textContent =
+    `卒業まであと ${d}日 ${p(h)}:${p(m)}:${p(s)}`;
 }
 
-setInterval(updateCountdown, 60000);
+setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // JSON 読み込み
@@ -152,7 +152,8 @@ function render(index) {
 
   vid.addEventListener('play', () => { isPlaying = true; });
   vid.addEventListener('pause', () => { isPlaying = false; });
-  vid.addEventListener('ended', () => { isPlaying = false; });
+  // 終了したら自動で次の動画へ（ループ）
+  vid.addEventListener('ended', () => { isPlaying = false; render(currentIndex + 1); });
 
   wrapper.appendChild(vid);
   slide.appendChild(wrapper);
@@ -163,7 +164,7 @@ function render(index) {
     <div class="title">${escapeHtml(video.title)}</div>
     <div class="meta">${escapeHtml(video.cast)} • ${video.duration}秒</div>
   `;
-  slide.appendChild(info);
+  wrapper.appendChild(info);  // 動画下部にオーバーレイ（コメント欄と重ならない）
 
   viewport.appendChild(slide);
 
