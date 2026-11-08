@@ -50,6 +50,12 @@ def date_of(stem: str) -> str:
 
 
 def title_of(stem: str) -> str:
+    # ライブ録画セグメント: 卒業前配信 N部
+    if "63osihaisin" in stem:
+        m = re.search(r"-(1820|2020|2230)_", stem)
+        bu = {"1820": "1部", "2020": "2部", "2230": "3部"}.get(
+            m.group(1) if m else "", "")
+        return f"卒業前配信 {bu}"
     for k, v in SPECIAL_TITLES.items():
         if k in stem:
             return v
