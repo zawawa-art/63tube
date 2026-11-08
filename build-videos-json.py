@@ -25,15 +25,26 @@ SPECIAL_TITLES = {
 }
 
 
-def probe(p: Path) -> tuple[int, int, int]:
+def probe(p: Path) -> tuple[int, int, int] | None:
     r = subprocess.run(
         ["ffprobe", "-v", "error", "-print_format", "json",
          "-show_entries", "stream=width,height:format=duration", str(p)],
         capture_output=True, text=True)
-    d = json.loads(r.stdout)
-    v = next(s for s in d["streams"] if s.get("width"))
-    dur = round(float(d["format"]["duration"]))
-    return v["width"], v["height"], dur
+    try:
+        d = json.loads(r.stdout)
+        v = next(s for s in d["streams"] if s.get("width"))
+        dur = round(float(d["format"]["duration"]))
+        return v["width"], v["height"], dur
+    except (KeyError, StopIteration, ValueError, json.JSONDecodeError):
+        return None  # 未完成・壊れファイル（変換中など）はスキップ
+
+
+def time_of(stem: str) -> str:
+    """ファイル名から撮影時刻 HHMMSS を拾う（同日内の並び順用）。"""
+    m = re.search(r"(\d{2})-(\d{2})-(\d{2})(?:_|\.|$)", stem)
+    if m:
+        return m.group(1) + m.group(2) + m.group(3)
+    return "999999"
 
 
 def date_of(stem: str) -> str:
@@ -47,6 +58,10 @@ def date_of(stem: str) -> str:
         if stem.startswith(k):
             return v
     return ""
+
+
+# 手動タイトル（再構築で消えない。ファイル名→タイトル）
+OVERRIDE_TITLES = {}
 
 
 def title_of(stem: str) -> str:
@@ -67,7 +82,11 @@ def title_of(stem: str) -> str:
     s = re.sub(r"_[0-9a-f]{6}$", "", s)          # clip_id末尾
     s = re.sub(r"_trim$", "", s)                 # QTトリム版接尾辞
     s = s.replace("_", " ").strip()
-    return s or stem
+    # ファイル名情報（IMG番号・単体hex id）は不要
+    s = re.sub(r"\bIMG\s?\d+\b", "", s)
+    s = re.sub(r"\b(?=[0-9a-f]*\d)[0-9a-f]{6}\b", "", s)
+    s = re.sub(r"\s{2,}", " ", s).strip()
+    return s  # 空のまま返す（メタ行「choco • N秒」だけ表示される）
 
 
 def main():
@@ -78,12 +97,16 @@ def main():
     entries = []
     for f in files:
         stem = f.stem
-        w, h, dur = probe(f)
+        pr = probe(f)
+        if pr is None:
+            continue  # 変換中・壊れファイル
+        w, h, dur = pr
         d = date_of(stem)
+        title = OVERRIDE_TITLES.get(f.name) or title_of(stem)
         entries.append({
             "date": d, "file": f.name, "w": w, "h": h, "dur": dur,
-            "title": title_of(stem)})
-    entries.sort(key=lambda e: (e["date"], e["file"]))
+            "title": title, "time": time_of(stem)})
+    entries.sort(key=lambda e: (e["date"], e.get("time", "999999"), e["file"]))
     out = []
     for i, e in enumerate(entries, 1):
         entry = {
