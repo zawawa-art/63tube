@@ -65,6 +65,7 @@ def title_of(stem: str) -> str:
     s = re.sub(r"^\d{2}-\d{2}-\d{2}_", "", s)    # 撮影時刻 HH-MM-SS_
     s = re.sub(r"_s\d{4,5}-e\d{4,5}$", "", s)    # セグメント区間
     s = re.sub(r"_[0-9a-f]{6}$", "", s)          # clip_id末尾
+    s = re.sub(r"_trim$", "", s)                 # QTトリム版接尾辞
     s = s.replace("_", " ").strip()
     return s or stem
 
