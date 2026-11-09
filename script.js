@@ -89,6 +89,28 @@ function pickUrl(v) {
   return ok === 'probably' ? v.url : v.url_sd;
 }
 
+// 動画ソース接続（HLSアダプティブ対応）
+// HEVC対応端末 + HLS有効 → hls.js or Safari native HLS
+// それ以外 → 従来のmp4（url / url_sd）
+function attachSource(vid, video) {
+  if (vid._hls) { vid._hls.destroy(); vid._hls = null; }
+  const hevcOk = document.createElement('video')
+    .canPlayType('video/mp4; codecs="hvc1.1.6.L150.B0"') === 'probably';
+  if (video.url_hls && hevcOk) {
+    if (vid.canPlayType('application/vnd.apple.mpegurl')) {
+      vid.src = video.url_hls; // Safari native HLS
+    } else if (window.Hls && Hls.isSupported()) {
+      vid._hls = new Hls({ maxBufferLength: 30 });
+      vid._hls.loadSource(video.url_hls);
+      vid._hls.attachMedia(vid);
+    } else {
+      vid.src = pickUrl(video);
+    }
+  } else {
+    attachSource(vid, video);
+  }
+}
+
 // スライド描画（ループ対応・プリロード再利用）
 function render(index) {
   // ループ処理：最初から前へ→最後へ、最後から次へ→最初へ
@@ -116,7 +138,7 @@ function render(index) {
   let vid = preloadedVideos[index];
   if (!vid) {
     vid = document.createElement('video');
-    vid.src = pickUrl(video);
+    attachSource(vid, video);
     vid.playsInline = true;
     vid.setAttribute('webkit-playsinline', '');
     vid.setAttribute('playsinline', '');
@@ -210,7 +232,7 @@ function preload(index) {
   if (preloadedVideos[index]) return;
   const v = videos[index];
   const vid = document.createElement('video');
-  vid.src = pickUrl(v);
+  attachSource(vid, v);
   vid.playsInline = true;
   vid.setAttribute('webkit-playsinline', '');
   vid.setAttribute('playsinline', '');

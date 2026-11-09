@@ -8,7 +8,8 @@
     "duration": 19,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2019-10-10_23-43-00_ChocoBaaam/master.m3u8?v=1"
   },
   {
     "id": "choco-002",
@@ -19,7 +20,8 @@
     "duration": 120,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20200603_20200603_第7世代_BurlesqueTOKYO_FBLIVE_6ef882_s01200-e01320/master.m3u8?v=1"
   },
   {
     "id": "choco-003",
@@ -30,7 +32,8 @@
     "duration": 120,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20200603_20200603_第7世代_BurlesqueTOKYO_FBLIVE_6ef882_s02700-e02820/master.m3u8?v=1"
   },
   {
     "id": "choco-004",
@@ -41,7 +44,8 @@
     "duration": 120,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20200611_20200611_3rd_choco_MartiniIchigo_HoshiSiori_BurnNo_df2721_s01845-e01965/master.m3u8?v=1"
   },
   {
     "id": "choco-005",
@@ -53,7 +57,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210207_2021-02-07_22-59-40_ChocoPole_IMG_8204_03776a.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210207_2021-02-07_22-59-40_ChocoPole_IMG_8204_03776a.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210207_2021-02-07_22-59-40_ChocoPole_IMG_8204_03776a/master.m3u8?v=1"
   },
   {
     "id": "choco-006",
@@ -65,7 +70,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210208_2021-02-08_00-01-06_IMG_8270_ef8164.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210208_2021-02-08_00-01-06_IMG_8270_ef8164.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210208_2021-02-08_00-01-06_IMG_8270_ef8164/master.m3u8?v=1"
   },
   {
     "id": "choco-007",
@@ -77,7 +83,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210228_2021-02-28_20-55-50_ChocoPole_IMG_9637_2de995.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210228_2021-02-28_20-55-50_ChocoPole_IMG_9637_2de995.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210228_2021-02-28_20-55-50_ChocoPole_IMG_9637_2de995/master.m3u8?v=1"
   },
   {
     "id": "choco-008",
@@ -89,7 +96,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210322_2021-03-22_21-13-34_IMG_1608_c2c1c3.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210322_2021-03-22_21-13-34_IMG_1608_c2c1c3.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210322_2021-03-22_21-13-34_IMG_1608_c2c1c3/master.m3u8?v=1"
   },
   {
     "id": "choco-009",
@@ -101,7 +109,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210322_2021-03-22_21-53-13_ChocoPole_IMG_1628_de140e.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210322_2021-03-22_21-53-13_ChocoPole_IMG_1628_de140e.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210322_2021-03-22_21-53-13_ChocoPole_IMG_1628_de140e/master.m3u8?v=1"
   },
   {
     "id": "choco-010",
@@ -112,7 +121,8 @@
     "duration": 3,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210731_2021-07-31_15-40-21_IMG_0862_17cb36_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-011",
@@ -123,7 +133,8 @@
     "duration": 76,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210825_2021-08-25_00-39-51_IMG_0609_d16136/master.m3u8?v=1"
   },
   {
     "id": "choco-012",
@@ -135,7 +146,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210916_2021-09-16_19-26-13_IMG_6597_32b2c8.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20210916_2021-09-16_19-26-13_IMG_6597_32b2c8.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20210916_2021-09-16_19-26-13_IMG_6597_32b2c8/master.m3u8?v=1"
   },
   {
     "id": "choco-013",
@@ -147,7 +159,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211003_2021-10-03_19-24-02_IMG_8533_f6b3e3.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211003_2021-10-03_19-24-02_IMG_8533_f6b3e3.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20211003_2021-10-03_19-24-02_IMG_8533_f6b3e3/master.m3u8?v=1"
   },
   {
     "id": "choco-014",
@@ -159,7 +172,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211117_2021-11-17_19-27-29_IMG_4385_31ce72.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211117_2021-11-17_19-27-29_IMG_4385_31ce72.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20211117_2021-11-17_19-27-29_IMG_4385_31ce72/master.m3u8?v=1"
   },
   {
     "id": "choco-015",
@@ -171,7 +185,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211118_2021-11-18_19-22-16_IMG_4657_808988_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20211118_2021-11-18_19-22-16_IMG_4657_808988_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20211118_2021-11-18_19-22-16_IMG_4657_808988_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-016",
@@ -183,7 +198,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20220225_IMG_1235_440bf7.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20220225_IMG_1235_440bf7.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20220225_IMG_1235_440bf7/master.m3u8?v=1"
   },
   {
     "id": "choco-017",
@@ -195,7 +211,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/IMG_1193_ChocoPole.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/IMG_1193_ChocoPole.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/IMG_1193_ChocoPole/master.m3u8?v=1"
   },
   {
     "id": "choco-018",
@@ -207,7 +224,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/IMG_3270_Choco.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/IMG_3270_Choco.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/IMG_3270_Choco/master.m3u8?v=1"
   },
   {
     "id": "choco-019",
@@ -219,7 +237,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20220916_2022-09-16_22-17-53_IMG_5360_e1d789.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20220916_2022-09-16_22-17-53_IMG_5360_e1d789.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20220916_2022-09-16_22-17-53_IMG_5360_e1d789/master.m3u8?v=1"
   },
   {
     "id": "choco-020",
@@ -230,7 +249,8 @@
     "duration": 58,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20230508_2023-05-08_19-19-29_IMG_7956_03a78e/master.m3u8?v=1"
   },
   {
     "id": "choco-021",
@@ -242,7 +262,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230717_2023-07-17_22-27-58_IMG_2456_0bc976.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230717_2023-07-17_22-27-58_IMG_2456_0bc976.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20230717_2023-07-17_22-27-58_IMG_2456_0bc976/master.m3u8?v=1"
   },
   {
     "id": "choco-022",
@@ -254,7 +275,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230806_2023-08-06_21-11-26_IMG_4544_b76f31.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230806_2023-08-06_21-11-26_IMG_4544_b76f31.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20230806_2023-08-06_21-11-26_IMG_4544_b76f31/master.m3u8?v=1"
   },
   {
     "id": "choco-023",
@@ -266,7 +288,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230811_2023-08-11_02-00-22_IMG_5348_a804c7.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230811_2023-08-11_02-00-22_IMG_5348_a804c7.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20230811_2023-08-11_02-00-22_IMG_5348_a804c7/master.m3u8?v=1"
   },
   {
     "id": "choco-024",
@@ -278,7 +301,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230830_2023-08-30_02-00-36_IMG_7329_f86f19.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20230830_2023-08-30_02-00-36_IMG_7329_f86f19.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20230830_2023-08-30_02-00-36_IMG_7329_f86f19/master.m3u8?v=1"
   },
   {
     "id": "choco-025",
@@ -290,7 +314,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-11-54_IMG_3646_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-11-54_IMG_3646_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2023-11-09_21-11-54_IMG_3646_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-026",
@@ -302,7 +327,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-29-14_IMG_3658.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-29-14_IMG_3658.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2023-11-09_21-29-14_IMG_3658/master.m3u8?v=1"
   },
   {
     "id": "choco-027",
@@ -314,7 +340,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-37-33_IMG_3659_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-37-33_IMG_3659_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2023-11-09_21-37-33_IMG_3659_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-028",
@@ -326,7 +353,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-55-01_IMG_3663.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_21-55-01_IMG_3663.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2023-11-09_21-55-01_IMG_3663/master.m3u8?v=1"
   },
   {
     "id": "choco-029",
@@ -338,7 +366,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_22-20-14_IMG_3675.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2023-11-09_22-20-14_IMG_3675.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2023-11-09_22-20-14_IMG_3675/master.m3u8?v=1"
   },
   {
     "id": "choco-030",
@@ -350,7 +379,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20231226_2023-12-26_22-46-29_IMG_6895_451ff2.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20231226_2023-12-26_22-46-29_IMG_6895_451ff2.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20231226_2023-12-26_22-46-29_IMG_6895_451ff2/master.m3u8?v=1"
   },
   {
     "id": "choco-031",
@@ -361,7 +391,8 @@
     "duration": 13,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240116_2024-01-16_20-17-33_IMG_8440_892fc9/master.m3u8?v=1"
   },
   {
     "id": "choco-032",
@@ -373,7 +404,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240529_2024-05-29_18-41-18_IMG_0442_404fe9.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240529_2024-05-29_18-41-18_IMG_0442_404fe9.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240529_2024-05-29_18-41-18_IMG_0442_404fe9/master.m3u8?v=1"
   },
   {
     "id": "choco-033",
@@ -385,7 +417,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_18-44-27_IMG_2603_335282.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_18-44-27_IMG_2603_335282.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240829_2024-08-29_18-44-27_IMG_2603_335282/master.m3u8?v=1"
   },
   {
     "id": "choco-034",
@@ -397,7 +430,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_20-43-51_IMG_3355_651e95.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_20-43-51_IMG_3355_651e95.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240829_2024-08-29_20-43-51_IMG_3355_651e95/master.m3u8?v=1"
   },
   {
     "id": "choco-035",
@@ -409,7 +443,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_20-59-32_IMG_2628_659b60_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_20-59-32_IMG_2628_659b60_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240829_2024-08-29_20-59-32_IMG_2628_659b60_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-036",
@@ -421,7 +456,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_22-11-53_IMG_3411_15a4f8.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20240829_2024-08-29_22-11-53_IMG_3411_15a4f8.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20240829_2024-08-29_22-11-53_IMG_3411_15a4f8/master.m3u8?v=1"
   },
   {
     "id": "choco-037",
@@ -433,7 +469,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20241010_2024-10-10_19-23-50_IMG_6716_03fa08.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20241010_2024-10-10_19-23-50_IMG_6716_03fa08.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20241010_2024-10-10_19-23-50_IMG_6716_03fa08/master.m3u8?v=1"
   },
   {
     "id": "choco-038",
@@ -445,7 +482,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20241212_2024-12-12_21-08-37_IMG_0374_de51cf.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20241212_2024-12-12_21-08-37_IMG_0374_de51cf.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20241212_2024-12-12_21-08-37_IMG_0374_de51cf/master.m3u8?v=1"
   },
   {
     "id": "choco-039",
@@ -457,7 +495,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250123_2025-01-23_21-08-20_IMG_3056_37ded5_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250123_2025-01-23_21-08-20_IMG_3056_37ded5_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20250123_2025-01-23_21-08-20_IMG_3056_37ded5_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-040",
@@ -469,7 +508,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250306_2025-03-06_21-10-03_IMG_7841_aa0507.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250306_2025-03-06_21-10-03_IMG_7841_aa0507.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20250306_2025-03-06_21-10-03_IMG_7841_aa0507/master.m3u8?v=1"
   },
   {
     "id": "choco-041",
@@ -481,7 +521,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250306_2025-03-06_21-10-47_IMG_7842_5e54ac.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250306_2025-03-06_21-10-47_IMG_7842_5e54ac.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20250306_2025-03-06_21-10-47_IMG_7842_5e54ac/master.m3u8?v=1"
   },
   {
     "id": "choco-042",
@@ -493,7 +534,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250411_2025-04-11_23-51-32_IMG_1409_c3088b.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250411_2025-04-11_23-51-32_IMG_1409_c3088b.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20250411_2025-04-11_23-51-32_IMG_1409_c3088b/master.m3u8?v=1"
   },
   {
     "id": "choco-043",
@@ -505,7 +547,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250508_2025-05-08_18-24-24_IMG_3733_d38f26.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20250508_2025-05-08_18-24-24_IMG_3733_d38f26.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20250508_2025-05-08_18-24-24_IMG_3733_d38f26/master.m3u8?v=1"
   },
   {
     "id": "choco-044",
@@ -517,7 +560,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20251222_2025-12-22_19-20-09_IMG_0108_736594.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20251222_2025-12-22_19-20-09_IMG_0108_736594.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20251222_2025-12-22_19-20-09_IMG_0108_736594/master.m3u8?v=1"
   },
   {
     "id": "choco-045",
@@ -529,7 +573,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260305_2026-03-05_21-32-31_IMG_5444_55dc46.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260305_2026-03-05_21-32-31_IMG_5444_55dc46.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260305_2026-03-05_21-32-31_IMG_5444_55dc46/master.m3u8?v=1"
   },
   {
     "id": "choco-046",
@@ -541,7 +586,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260408_2026-04-08_23-52-12_IMG_7147_62e578.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260408_2026-04-08_23-52-12_IMG_7147_62e578.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260408_2026-04-08_23-52-12_IMG_7147_62e578/master.m3u8?v=1"
   },
   {
     "id": "choco-047",
@@ -553,7 +599,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260508_2026-05-08_18-31-28_IMG_8546_f09957.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260508_2026-05-08_18-31-28_IMG_8546_f09957.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260508_2026-05-08_18-31-28_IMG_8546_f09957/master.m3u8?v=1"
   },
   {
     "id": "choco-048",
@@ -565,7 +612,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260521_2026-05-21_23-51-22_IMG_8860_2408da.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260521_2026-05-21_23-51-22_IMG_8860_2408da.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260521_2026-05-21_23-51-22_IMG_8860_2408da/master.m3u8?v=1"
   },
   {
     "id": "choco-049",
@@ -577,7 +625,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260813_2026-08-13_22-59-25_IMG_6958_7e3855.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260813_2026-08-13_22-59-25_IMG_6958_7e3855.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260813_2026-08-13_22-59-25_IMG_6958_7e3855/master.m3u8?v=1"
   },
   {
     "id": "choco-050",
@@ -589,7 +638,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260831_2026-08-31_23-19-40_IMG_5487_cf361b.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20260831_2026-08-31_23-19-40_IMG_5487_cf361b.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20260831_2026-08-31_23-19-40_IMG_5487_cf361b/master.m3u8?v=1"
   },
   {
     "id": "choco-051",
@@ -601,7 +651,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/20261019_2026-10-19_23-16-22_IMG_0961_d12621.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/20261019_2026-10-19_23-16-22_IMG_0961_d12621.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20261019_2026-10-19_23-16-22_IMG_0961_d12621/master.m3u8?v=1"
   },
   {
     "id": "choco-052",
@@ -613,7 +664,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-08-27_IMG_8051_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-08-27_IMG_8051_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2026-11-06_2026-11-06_23-08-27_IMG_8051_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-053",
@@ -625,7 +677,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-11-08_IMG_1459.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-11-08_IMG_1459.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2026-11-06_2026-11-06_23-11-08_IMG_1459/master.m3u8?v=1"
   },
   {
     "id": "choco-054",
@@ -637,7 +690,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-32-57_IMG_8056_trim.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-32-57_IMG_8056_trim.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2026-11-06_2026-11-06_23-32-57_IMG_8056_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-055",
@@ -649,7 +703,8 @@
     "width": 1080,
     "height": 1920,
     "orientation": "portrait",
-    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-55-49_IMG_1476.sd.mp4?v=3"
+    "url_sd": "https://pub.zawawa.uk/63tube/choco/2026-11-06_2026-11-06_23-55-49_IMG_1476.sd.mp4?v=3",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/2026-11-06_2026-11-06_23-55-49_IMG_1476/master.m3u8?v=1"
   },
   {
     "id": "choco-056",
@@ -660,7 +715,8 @@
     "duration": 17,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20261106_20261106-2020_63osihaisin-2_s00555-e00600_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-057",
@@ -671,7 +727,8 @@
     "duration": 33,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20261106_20261106-2020_63osihaisin-2_s00655-e00750_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-058",
@@ -682,7 +739,8 @@
     "duration": 9,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20261106_20261106-2020_63osihaisin_s01065-e01155_trim/master.m3u8?v=1"
   },
   {
     "id": "choco-059",
@@ -693,6 +751,7 @@
     "duration": 47,
     "width": 1080,
     "height": 1920,
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "url_hls": "https://pub.zawawa.uk/63tube/choco/hls/20261106_20261106-2230_63osihaisin-3_s00295-e00410_trim/master.m3u8?v=1"
   }
 ]
