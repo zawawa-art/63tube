@@ -59,7 +59,18 @@ async function loadData() {
     videos = await vRes.json();
     comments = await cRes.json();
     totalCountEl.textContent = videos.length;
-    render(currentIndex);
+    // ディープリンク: ?c=<video id または連番> から開始
+    // 例: ?c=choco-003 / ?c=3（3本目）
+    const startParam = new URLSearchParams(location.search).get('c');
+    let startIdx = 0;
+    if (startParam) {
+      const i = videos.findIndex((v) => v.id === startParam);
+      if (i >= 0) startIdx = i;
+      else if (/^\d+$/.test(startParam)) {
+        startIdx = Math.min(parseInt(startParam, 10) - 1, videos.length - 1);
+      }
+    }
+    render(startIdx);
   } catch (err) {
     console.error('データ読み込みエラー:', err);
     viewport.innerHTML = '<div class="loading">データの読み込みに失敗しました<br>ローカルサーバーで動かしてください</div>';
