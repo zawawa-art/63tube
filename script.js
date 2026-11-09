@@ -11,7 +11,9 @@ const API_BASE = '.'; // 同ディレクトリの JSON を使用
 let videos = [];
 let comments = [];
 let currentIndex = 0;
-let likes = JSON.parse(localStorage.getItem('63tube_likes') || '{}');
+let serverLikes = {};   // 共有ハート数（KV）
+let sessionLikes = {};  // この端末のセッション分
+let pendingLikes = {};  // 未送信分（throttle後にまとめ送信）
 
 const viewport = document.getElementById('viewport');
 const navPrevBtn = document.getElementById('navPrev');
@@ -52,12 +54,14 @@ updateCountdown();
 // JSON 読み込み
 async function loadData() {
   try {
-    const [vRes, cRes] = await Promise.all([
+    const [vRes, cRes, lRes] = await Promise.all([
       fetch(`${API_BASE}/videos.json`),
-      fetch(`${API_BASE}/comments.json`)
+      fetch(`${API_BASE}/api/comments`),
+      fetch(`${API_BASE}/api/likes`),
     ]);
     videos = await vRes.json();
     comments = await cRes.json();
+    serverLikes = await lRes.json();
     totalCountEl.textContent = videos.length;
     // ディープリンク: ?c=<video id または連番> から開始
     // 例: ?c=choco-003 / ?c=3（3本目）
@@ -223,11 +227,36 @@ function preload(index) {
   vid.load();
 }
 
-// いいね
+// いいね（共有: サーバー数 + このセッションの分）
 function updateLikeUI(videoId) {
-  const liked = likes[videoId] || 0;
-  likeCountEl.textContent = liked;
-  likeBtn.classList.toggle('liked', liked > 0);
+  const total = (serverLikes[videoId] || 0) + (sessionLikes[videoId] || 0);
+  likeCountEl.textContent = total;
+  likeBtn.classList.toggle('liked', (sessionLikes[videoId] || 0) > 0);
+}
+
+// 連打はローカルで即反映 → 2秒静かなところでまとめてサーバーへ
+let likeFlushTimer = null;
+function scheduleLikeFlush(videoId) {
+  if (likeFlushTimer) return;
+  likeFlushTimer = setTimeout(async () => {
+    likeFlushTimer = null;
+    const n = pendingLikes[videoId] || 0;
+    if (!n) return;
+    pendingLikes[videoId] = 0;
+    try {
+      const res = await fetch(`${API_BASE}/api/likes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ video_id: videoId, n }),
+      });
+      const j = await res.json();
+      if (j.ok) {
+        serverLikes[videoId] = j.count - (sessionLikes[videoId] || 0) + (sessionLikes[videoId] || 0);
+        serverLikes[videoId] = j.count - 0; // サーバー正値で上書き（セッション分込み）
+        updateLikeUI(videoId);
+      }
+    } catch (e) { /* オフライン時はローカル表示のまま */ }
+  }, 2000);
 }
 
 muteBtn.addEventListener('click', (e) => {
@@ -243,9 +272,10 @@ muteBtn.addEventListener('click', (e) => {
 
 likeBtn.addEventListener('click', () => {
   const video = videos[currentIndex];
-  likes[video.id] = (likes[video.id] || 0) + 1;
-  localStorage.setItem('63tube_likes', JSON.stringify(likes));
+  sessionLikes[video.id] = (sessionLikes[video.id] || 0) + 1;
+  pendingLikes[video.id] = (pendingLikes[video.id] || 0) + 1;
   updateLikeUI(video.id);
+  scheduleLikeFlush(video.id);
   spawnHearts();
 });
 
@@ -297,6 +327,12 @@ function addComment() {
   comments.unshift(newComment);
   commentInput.value = '';
   renderComments(video.id);
+  // サーバーへ共有（失敗してもローカル表示は維持）
+  fetch(`${API_BASE}/api/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(newComment),
+  }).catch(() => {});
 }
 
 // スワイプ処理

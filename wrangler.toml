@@ -1,0 +1,6 @@
+name = "63tube"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "TUBE_KV"
+id = "8f5e99c0eb844300a89e4e367976bc71"
